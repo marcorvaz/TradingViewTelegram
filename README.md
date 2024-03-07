@@ -22,19 +22,19 @@ All alerts can be instantly sent to Telegram, Discord, Twitter and/or Email.
 - Slack Support using [webhooks](https://api.slack.com/messaging/webhooks)
 - Twitter Support using the tweepy libary
 - Email Support using [smtplib](https://docs.python.org/3/library/smtplib.html)
-- Alert channels can be enabled or disabled in [`config.py`](https://github.com/MasDenk/TradingViewTelegram/blob/master/config.py)
+- Alert channels can be enabled or disabled in [`config.py`](https://github.com/marcorvaz/TradingViewTelegram/blob/master/config.py)
 - Dynamically send alerts to different Telegram and/or Discord channels
 - TradingView `{{close}}`, `{{exchange}}` etc. variables support. Read more [here](https://www.tradingview.com/blog/en/introducing-variables-in-alerts-14880/)
 
-> 💡 Got a feature idea? Open an [issue](https://github.com/MasDenk/TradingViewTelegram/issues/new?assignees=&labels=enhancement&template=feature-request---.md) and I might implement it.
+> 💡 Got a feature idea? Open an [issue](https://github.com/marcorvaz/TradingViewTelegram/issues/new?assignees=&labels=enhancement&template=feature-request---.md) and I might implement it.
 
 ## Installation
 > ⚠️ Best to run the bot on a VPS. I can recommend Hetzner</a>'s CX11 VPS for 2.89€/month. now and receive **€20 free** credits.
-1. Clone this repository `git clone https://github.com/MasDenk/TradingViewTelegram.git`
+1. Clone this repository `git clone https://github.com/marcorvaz/TradingViewTelegram.git`
 1. Create your virtual environment `python3 -m venv TradingView-Webhook-Bot`
 1. Activate it `source TradingViewTelegram/bin/activate && cd TradingViewTelegram`
 1. Install all requirements `pip install -r requirements.txt`
-1. Edit and update [`config.py`](https://github.com/MasDenk/TradingViewTelegram/blob/master/config.py)
+1. Edit and update [`config.py`](https://github.com/marcorvaz/TradingViewTelegram/blob/master/config.py)
 1. Setup TradingView alerts. An example alert message would be:
     ```json
     {
@@ -45,7 +45,7 @@ All alerts can be instantly sent to Telegram, Discord, Twitter and/or Email.
      "msg": "Long *#{{ticker}}* at `{{close}}`"
     }
     ```
-    - `key` is mandatory! It has to match with `sec_key` in [`config.py`](https://github.com/MasDenk/TradingViewTelegram/blob/master/config.py). It's an extra security measurement to ensure nobody else is executing your alerts
+    - `key` is mandatory! It has to match with `sec_key` in [`config.py`](https://github.com/marcorvaz/TradingViewTelegram/blob/master/config.py). It's an extra security measurement to ensure nobody else is executing your alerts
     - `telegram`, `discord`, `slack` is optional. If it is not set it will fall back to the config.py settings
     - `msg` can be anything. Markdown for [Telegram](https://core.telegram.org/api/entities) and [Discord](https://support.discord.com/hc/en-us/articles/210298617-Markdown-Text-101-Chat-Formatting-Bold-Italic-Underline-) is supported as well
         - TradingViews variables like `{{close}}`, `{{exchange}}` etc. work too. More can be found [here](https://www.tradingview.com/blog/en/introducing-variables-in-alerts-14880/)
@@ -54,8 +54,8 @@ All alerts can be instantly sent to Telegram, Discord, Twitter and/or Email.
 1. Run the bot with `python main.py`
 
 ### Docker
-1. Clone this repository `git clone https://github.com/MasDenk/TradingViewTelegram.git`
-1. Edit and update [`config.py`](https://github.com/MasDenk/TradingViewTelegram/blob/master/config.py)
+1. Clone this repository `git clone https://github.com/marcorvaz/TradingViewTelegram.git`
+1. Edit and update [`config.py`](https://github.com/marcorvaz/TradingViewTelegram/blob/master/config.py)
 1. `docker-compose build`
 1. `docker-compose up`
 
@@ -65,7 +65,7 @@ All alerts can be instantly sent to Telegram, Discord, Twitter and/or Email.
 ![Webhook Bot](https://i.imgur.com/vZA42cc.png)
 
 ## How can I help?
-All kinds of contributions are welcome 🙌! The most basic way to show your support is to `⭐️ star` the project, or raise [`🐞 issues`](https://github.com/MasDenk/TradingViewTelegram/issues/new/choose).
+All kinds of contributions are welcome 🙌! The most basic way to show your support is to `⭐️ star` the project, or raise [`🐞 issues`](https://github.com/marcorvaz/TradingViewTelegram/issues/new/choose).
 
 ***
 
